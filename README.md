@@ -1,4 +1,3 @@
 # Darpan Khanna's Personal Website
-This is a personal website built using the Hack4Impact Starter Pack!
-Yay, this is a great website.
+This is my personal website, I have built it using HTML and CSS. I hope you like it!
 [Visit it here!](https://darpank23.github.io)
