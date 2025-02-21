@@ -170,10 +170,12 @@ h1 {
   color: antiquewhite;
 }
 
-.skill-list, .course-list, h2, h5 {
+.skill-list,
+.course-list,
+h2,
+h5 {
   color: #ffff;
 }
-
 
 .section-title {
   align-items: center;
@@ -196,7 +198,7 @@ h1 {
 
 .footer {
   color: #ffff;
-  position: relative;
+  position: fixed; /* changed */
   width: 100%;
   background: #232527;
   min-height: 50px;
@@ -222,10 +224,13 @@ h1 {
 }
 
 .about,
-.project, .project1, .project2, .project3 {
+.project,
+.project1,
+.project2,
+.project3 {
   display: flex;
   align-items: center;
-  max-width: 900px;
+  max-width: 900px; 
   margin: 100px auto;
   padding: 20px;
   border-radius: 10px;
@@ -234,13 +239,17 @@ h1 {
   background: transparent;
   background-color: teal;
   border: solid 2px #12ffeb;
+  transition: border-color 0.3s ease;
+  transition: border-radius 0.3s ease
 }
 
 .about:hover,
-.project:hover, .project1:hover, .project2:hover, .project3:hover {
-  box-sizing: 120%;
-  transform: scale(1.5);
-  transition: transform 1.5s;
+.project:hover,
+.project1:hover,
+.project2:hover,
+.project3:hover {
+  border-color: whitesmoke;
+  border-radius: 20px;
 }
 
 .about-image,
@@ -309,21 +318,20 @@ input[type="submit"]:hover {
   margin: 100px auto 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px
+  grid-gap: 30px;
 }
 
-.img-gallery img{
+.img-gallery img {
   width: 100%;
   cursor: pointer;
 }
 
-.img-gallery img:hover{
+.img-gallery img:hover {
   transform: scale(0.8) rotate(-10deg);
   transition: transform 1.5s;
   border-radius: 15px;
   box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
-
 
 .gallery-detail {
   color: #ffff;
@@ -332,4 +340,15 @@ input[type="submit"]:hover {
   display: flex;
   font-size: 15px;
   margin-top: 15px;
+}
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background: linear-gradient(to right, teal, #12ffeb);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.2s ease-out;
 }
